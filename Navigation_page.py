@@ -75,6 +75,10 @@ def Scrap_details():
                     SegFeild[SegIndex] = html.unescape(str(SegFeild[SegIndex]))
                     SegFeild[SegIndex] = str(SegFeild[SegIndex]).replace("'", "''").replace('#39;', '\'')
                     print(SegFeild[SegIndex])
+                if len(SegFeild[19]) >= 200:
+                    SegFeild[19] = str(SegFeild[19])[:200]+'...'
+                if len(SegFeild[18]) >= 1200:
+                    SegFeild[18] = str(SegFeild[18])[:1200]+'...'
                 Check_date(SegFeild)
                 Global_var.Total += 1
                 print(" Total: " + str(Global_var.Total) + " Duplicate: " + str(Global_var.duplicate) + " Expired: " + str(Global_var.expired) + " Inserted: " + str(Global_var.inserted) + " Skipped: " + str(Global_var.skipped) + " Deadline Not given: " + str(Global_var.deadline_Not_given) + " QC Tenders: "+ str(Global_var.QC_tender),"\n")
