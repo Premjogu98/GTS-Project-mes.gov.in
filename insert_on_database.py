@@ -194,7 +194,7 @@ def insert_L2L(SegFeild, Fileid):
     file_id = Fileid
     mydb_L2L = DB_connection()
     mycursorL2L = mydb_L2L.cursor()
-    if SegFeild[12] != "" and SegFeild[19] != "" and SegFeild[24] != "" and SegFeild[7] != "" and SegFeild[2] != "":
+    if SegFeild[12] != "" and SegFeild[19] != "" and SegFeild[24] != "" and SegFeild[7] != "":
         dms_entrynotice_tblcompulsary_qc = "2"
     else:
         dms_entrynotice_tblcompulsary_qc = "1"
